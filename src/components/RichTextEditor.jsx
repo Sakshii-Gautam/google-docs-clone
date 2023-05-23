@@ -1,10 +1,24 @@
 import { Editor } from 'react-draft-wysiwyg';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
-import { EditorState } from 'draft-js';
-import { useState } from 'react';
+import { EditorState, convertToRaw, convertFromRaw } from 'draft-js';
+import { useState, useEffect } from 'react';
 
 const RichTextEditor = () => {
-  const [editorState, setEditorState] = useState(EditorState.createEmpty());
+  const [editorState, setEditorState] = useState(() => {
+    const savedContent = localStorage.getItem('editorContent');
+    // converting the saved content from localstorage to EditorState
+    if (savedContent) {
+      const contentState = convertFromRaw(JSON.parse(savedContent));
+      return EditorState.createWithContent(contentState);
+    }
+    return EditorState.createEmpty();
+  });
+
+  useEffect(() => {
+    const contentState = editorState.getCurrentContent();
+    const serializedContent = JSON.stringify(convertToRaw(contentState));
+    localStorage.setItem('editorContent', serializedContent);
+  }, [editorState]);
 
   const onEditorStateChange = (newEditorState) => {
     setEditorState(newEditorState);
