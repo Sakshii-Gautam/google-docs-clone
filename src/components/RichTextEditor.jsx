@@ -13,6 +13,7 @@ const RichTextEditor = () => {
   const toolbarOptions = {
     options: [
       'history',
+      'emoji',
       'blockType',
       'fontFamily',
       'fontSize',
