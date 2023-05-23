@@ -117,14 +117,14 @@ const Header = () => {
                 Share
               </button>
               <img
-                className='flex lg:hidden p-1 md:flex cursor-pointer rounded-full hover:bg-[#edf2fa]'
+                className='flex lg:hidden p-1 cursor-pointer rounded-full hover:bg-[#edf2fa]'
                 width={34}
                 height={34}
                 src={user}
                 alt='user'
               />
               <img
-                className=' p-1 hidden md:flex  cursor-pointer rounded-full hover:bg-[#edf2fa]'
+                className='p-1 flex cursor-pointer rounded-full hover:bg-[#edf2fa]'
                 width={50}
                 height={50}
                 src={userLogo}
