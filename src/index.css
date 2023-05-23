@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 13px;
+  background-color: #f8f9fa;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  background-clip: padding-box;
+  border: solid transparent;
+  border-radius: 9999px;
+}
+
+.share-btn:hover {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 3px 1px rgba(0, 0, 0, 0.15);
+}
+
+.google-docs-toolbar {
+  background-color: #edf2fa;
+  padding: 5px;
+  border-radius: 9999px;
+  padding: 3px 8px;
+  max-width: 92%;
+}
+
+.rdw-inline-wrapper,
+.rdw-block-wrapper,
+.rdw-fontsize-wrapper,
+.rdw-fontfamily-wrapper,
+.rdw-list-wrapper,
+.rdw-text-align-wrapper,
+.rdw-colorpicker-wrapper,
+.rdw-link-wrapper,
+.rdw-embedded-wrapper,
+.rdw-emoji-wrapper,
+.rdw-image-wrapper,
+.rdw-remove-wrapper,
+.rdw-history-wrapper {
+  margin-bottom: 0;
+}
+
+.google-docs-toolbar .rdw-option-wrapper {
+  background: transparent;
+  height: 32px;
+  border: none;
+  padding: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.google-docs-toolbar .rdw-option-wrapper:hover {
+  background: rgba(68, 71, 70, 0.078);
+  box-shadow: none;
+  border-radius: 5px;
+}
+
+.google-docs-toolbar .rdw-dropdown-wrapper {
+  background: transparent;
+}
+
+.google-docs-toolbar .rdw-dropdown-wrapper:hover {
+  background: rgba(68, 71, 70, 0.078);
+  box-shadow: none;
+  border-radius: 5px;
+}
